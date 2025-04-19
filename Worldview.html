@@ -29,8 +29,8 @@
             </div>
 
             <div class="nav-3">
-                <input type="button" value="Login" aria-label="Login">
-                <input type="button" value="Signup" aria-label="Signup">
+                <input type="button" value="Login" aria-label="Login" onclick="openModal('loginModal')">
+                <input type="button" value="Signup" aria-label="Signup" onclick="openModal('signupModal')">
             </div>
         </nav>
         <div class="nav">
@@ -56,6 +56,38 @@
                 <a href="Blog.html" class="back-link">← Back to Blog</a>
             </div>
         </section>
+
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('loginModal')">&times;</span>
+                <h2>Login</h2>
+                <form>
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Signup Modal -->
+        <div id="signupModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('signupModal')">&times;</span>
+                <h2>Signup</h2>
+                <form>
+                    <label for="signupName">Name:</label>
+                    <input type="text" id="signupName" placeholder="Enter your name" required>
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" placeholder="Enter your password" required>
+                    <button type="submit">Signup</button>
+                </form>
+            </div>
+        </div>
 
         <footer>
             <div class="footer-box">

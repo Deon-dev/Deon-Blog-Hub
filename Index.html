@@ -18,9 +18,8 @@
 
         .swiper {
             width: 80%;
-            height: 400px; /* Adjust height as needed */
+            height: 400px;
             margin: 0 auto; /* Center the swiper */
-            /* padding: 20px 0; Add some padding around the swiper */
         }
 
         .swiper-slide {
@@ -74,9 +73,9 @@
         }
 
         .recent-text button {
-            background-color: #007bff;
-            color: white;
-            border: none;
+            background-color: transparent;
+            color: #03624C;
+            border: 1px solid #03624C;
             padding: 10px 20px;
             border-radius: 5px;
             cursor: pointer;
@@ -84,22 +83,25 @@
         }
 
         .recent-text button:hover {
-            background-color: #0056b3;
-            transform: scale(1.05); /* Add a slight zoom effect */
-            transition: all 0.3s ease;
+            background-color: #03624C;
+            color: white;
+            transform: scale(1.05); /* slight zoom effect */
+            transition: all 0.3s ease-in-out;
         }
 
         .swiper-button-next,
         .swiper-button-prev {
-            color: #007bff;
+            color: #03624C;
+            height: 100px;
+            width: 3px;
         }
 
         .swiper-pagination-bullet {
-            background: #007bff;
+            background: #03624C;
         }
 
         .swiper-pagination-bullet-active {
-            background: #0056b3;
+            background: #03624C;
         }
     </style>
 </head>
@@ -108,7 +110,7 @@
         <nav class="navbar">
             <div class="nav-1">
                 <h1 id="logo">Deon<span id="tag">Hub.</span></h1>
-                <input type="search" name="search" id="search" placeholder="Search">
+                <input type="search" name="search" id="search" placeholder="Search blog posts..." aria-label="Search blog posts">
             </div>
 
             <div class="nav-2">
@@ -119,8 +121,8 @@
             </div>
 
             <div class="nav-3">
-                <input type="button" value="Login">
-                <input type="button" value="Signup">
+                <input type="button" value="Login" onclick="openModal('loginModal')">
+                <input type="button" value="Signup" onclick="openModal('signupModal')">
             </div>
         </nav>
         <div class="nav">
@@ -180,7 +182,40 @@
                     },
                 });
             </script>
+            <script src="script.js"></script>
         </main>
     </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" placeholder="Enter your email" required>
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Signup</h2>
+            <form>
+                <label for="signupName">Name:</label>
+                <input type="text" id="signupName" placeholder="Enter your name" required>
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" placeholder="Enter your email" required>
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" placeholder="Enter your password" required>
+                <button type="submit">Signup</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
