@@ -77,10 +77,21 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 input[type="button"] {
-    padding: 10px;
-    border-radius: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ffffffa2;
+    color: #111;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-3 input[type="button"]:hover {
+    background-color: #03624C; /* Darker green on hover */
+    color: #fff; /* Change text color to white on hover */
     border: none;
-    width: 90px;
+    transform: scale(1.05);
 }
 
 main {
@@ -105,7 +116,7 @@ main {
 }
 
 .pact .box {
-    background-color: rgba(214, 217, 220, 0.562);
+    /* background-color: #f9f9f9; */
     display: flex;
     justify-content: space-between;
     border-radius: 10px 0 0 10px;
@@ -115,13 +126,25 @@ main {
     border: 1px solid #ccc;
 }
 
+hr {
+    border: none; /* Remove default border */
+}
+
 .box-content {
     /* text-align: justify; */
-    padding: 15px;
+    padding: 20px;
     line-height: normal;
 }
 
+.box-content  a {
+    color: #03624C;
+    text-decoration: none;
+}
 
+.box-content  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
 
 .newsletter {
     text-align: center;
