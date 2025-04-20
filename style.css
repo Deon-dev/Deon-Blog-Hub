@@ -148,6 +148,7 @@ hr {
 .box-content  a {
     color: #03624C;
     text-decoration: none;
+    font-family: var(--heading);
 }
 
 .box-content  a:hover {
