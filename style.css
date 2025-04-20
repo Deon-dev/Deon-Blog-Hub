@@ -48,12 +48,21 @@ a {
     height: 50px;
 }
 
+.nav a:hover {
+    color: #03624C;
+}
+
 .nav-1 {
     /* background-color: brown; */
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 300px;
+    color: #fff;
+}
+
+.nav-1 #tag {
+    color: #03624C;
 }
 
 .nav-1 input {
@@ -258,18 +267,19 @@ footer a {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
-    overflow: auto;
+    height: 100vh;
+    overflow: hidden;
     background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: transparent; /*Transparent background I used white background initially */
     margin: 15% auto;
     padding: 20px;
     border-radius: 10px;
     width: 30%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
 
 .modal-content h2 {
@@ -282,6 +292,11 @@ footer a {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+.modal-content input:focus {
+    border-color: #03624C;
+    outline: none;
 }
 
 .modal-content button {
