@@ -295,7 +295,7 @@ footer a {
 
 .modal-content {
     background-color: transparent; /*Transparent background I used white background initially */
-    margin: 15% auto;
+    margin: 10% auto;
     padding: 20px;
     border-radius: 5px;
     width: 30%;
@@ -303,9 +303,9 @@ footer a {
     backdrop-filter: blur(10px);
 }
 
-.modal-content h2 {
+/* .modal-content h2 {
     margin-top: 0;
-}
+} */
 
 .modal-content input {
     width: 100%;
@@ -369,4 +369,27 @@ footer a {
     background-color: #02432E; /* Darker green on hover */
     transform: scale(1.1); /* Slight zoom effect */
 }
+
+.form-options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox {
+    /* margin-right: 5px; */
+    cursor: pointer;
+}
+
+.forgot-password, a, .signup {
+    text-decoration: none;
+    color: #3498db;
+}
+  
+.forgot-password:hover, .signup:hover, a:hover {
+    text-decoration: underline;
+}
+
+
 
