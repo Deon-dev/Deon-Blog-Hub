@@ -75,3 +75,29 @@ window.addEventListener('click', function (event) {
         menu.style.display = 'none';
     }
 });
+
+const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        480: {
+            slidesPerView: 1, // Show 1 slide on mobile
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 2, // Show 2 slides on tablets
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 3, // Show 3 slides on desktops
+            spaceBetween: 30,
+        },
+    },
+});

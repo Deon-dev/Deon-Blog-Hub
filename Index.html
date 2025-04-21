@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsiveness.css">
     <style>
         :root {
             --heading: 'Poppins', sans-serif;
@@ -51,10 +52,6 @@
         .recent-text {
             padding: 20px;
         }
-
-        /* .recent-text a {
-            color: #333;
-        } */
 
         .recent-text h1 {
             font-size: 1.8rem;
@@ -108,6 +105,14 @@
         .swiper-pagination-bullet-active {
             background: #03624C;
         }
+
+        main .contact-icons {
+            width: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
     </style>
 </head>
 <body id="body">
@@ -119,10 +124,13 @@
             </div>
 
             <div class="nav-2">
-                <a href="#home">HOME</a>
-                <a href="Blog.html">BLOG</a>
-                <a href="#about">ABOUT</a>
-                <a href="#contact">CONTACT</a>
+                <span class="burger-icon" onclick="toggleMenu()">&#9776;</span> <!-- Burger Icon -->
+                <div id="menu-container" class="menu-container">
+                    <a href="Index.html">HOME</a>
+                    <a href="Blog.html">BLOG</a>
+                    <a href="#about">ABOUT</a>
+                    <a href="#footer">CONTACT</a>
+                </div>
             </div>
 
             <div class="nav-3">
@@ -172,7 +180,15 @@
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+            </div><br><br>
+
+            <div class="contact-icons">
+                <a href="https://github.com/https://github.com/Deon-dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://wa.me/233246129435" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://web.facebook.com/Gid.clakoy"><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
             </div>
+            
             <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
             <script>
                 const swiper = new Swiper('.mySwiper', {

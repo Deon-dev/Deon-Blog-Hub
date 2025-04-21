@@ -70,7 +70,7 @@ img {
 }
 
 .pact .box {
-    flex-direction: column; /* Stack content inside each box */
+    flex-direction: row; /* Stack content inside each box */
     margin-bottom: 20px;
 }
 
@@ -91,12 +91,17 @@ img {
     .navbar {
         flex-direction: column;
         justify-content: space-between;
-        /* align-items: flex-start; */
     }
+
+    .swiper {
+        width: 90%; /* Slightly smaller width for tablets */
+    }
+
 
     .footer {
         font-size: 14px;
     }
+
 
     .burger-icon {
         display: block; /* Show burger icon on mobile/tablet */
@@ -139,21 +144,6 @@ img {
 
     .nav-3 {
         display: none;
-    }
-}
-
-@media (min-width: 768px) {
-    .nav-1, .nav-2, .nav-3 {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-
-    .pact {
-        flex-direction: row; /* Side-by-side layout for tablets */
-    }
-
-    .pact .box {
-        flex-direction: row; /* Horizontal layout inside each box */
     }
 }
 
@@ -202,5 +192,95 @@ img {
 
     .pact {
         width: 80%; /* Center content with a fixed width */
+    }
+}
+
+/* Apple Watch Screens (162px and below) */
+@media screen and (max-width: 162px) {
+    body {
+        font-size: 10px; /* Reduce font size for readability */
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        /* flex-direction: column; */
+        /* align-items: center; */
+        text-align: center;
+        padding: 5px;
+        justify-content: center;
+    }
+
+    .nav-1 h1 {
+        font-size: 1rem; /* Smaller logo text */
+        width: 90%; /* Full width for search bar */
+        font-size: 0.8rem;
+        padding: 3px;
+        
+    }
+
+    .nav-1 input {
+        display: none;
+    }
+
+    .burger-icon {
+        font-size: 1rem; /* Smaller burger icon */
+        position: absolute;
+        right: 70px;
+        top: -25px;
+    }
+
+    .menu-container {
+        width: 100%; /* Full width for menu */
+        padding: 5px;
+    }
+
+    .menu-container a {
+        font-size: 0.8rem; /* Smaller font size for links */
+        padding: 5px;
+    }
+
+    .pact {
+        width: 100%; /* Full width for content */
+        padding: 5px;
+    }
+
+    .pact .box {
+        flex-direction: column; /* Stack content vertically */
+        margin-bottom: 10px;
+    }
+
+    .recent-text h1, .recent-text h3 {
+        font-size: 0.9rem; /* Smaller headings */
+    }
+
+    .recent-text p {
+        font-size: 0.7rem; /* Smaller paragraph text */
+    }
+
+    .swiper {
+        width: 100%; /* Full width for swiper */
+        height: auto; /* Adjust height dynamically */
+    }
+
+    .swiper-slide img {
+        width: 100%; /* Ensure images are responsive */
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .footer {
+        font-size: 10px; /* Smaller footer text */
+        padding: 5px;
+    }
+
+    .footer-box {
+        flex-direction: column;
+        /* align-items: center; */
+    }
+
+    .footer-box .contact-icons {
+        justify-content: left;
+        margin-bottom: 5px;
     }
 }
