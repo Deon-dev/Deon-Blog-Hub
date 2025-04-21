@@ -56,3 +56,22 @@ backToTopButton.addEventListener('click', function () {
         behavior: 'smooth' // Smooth scrolling effect
     });
 });
+
+// Function to toggle the menu
+function toggleMenu() {
+    const menu = document.getElementById('menu-container');
+    if (menu.style.display === 'block') {
+        menu.style.display = 'none'; // Hide the menu
+    } else {
+        menu.style.display = 'block'; // Show the menu
+    }
+}
+
+// Close the menu when clicking outside of it
+window.addEventListener('click', function (event) {
+    const menu = document.getElementById('menu-container');
+    const burgerIcon = document.querySelector('.burger-icon');
+    if (event.target !== menu && event.target !== burgerIcon) {
+        menu.style.display = 'none';
+    }
+});

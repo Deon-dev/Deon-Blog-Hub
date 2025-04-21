@@ -1,0 +1,206 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Default Styles (Desktop First) */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    padding: 10px 20px;
+}
+
+
+.nav-1, .nav-2, .nav-3 {
+    flex-wrap: wrap;
+}
+
+.nav-1 input {
+    width: 100%; /* Full width on smaller screens */
+    margin: 5px 0;
+}
+
+/* Default Styles for nav-2 */
+.nav-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Burger Icon */
+.burger-icon {
+    display: none; /* Hidden by default */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #03624C;
+}
+
+/* Menu Container */
+.menu-container {
+    display: flex;
+    gap: 15px;
+}
+
+/* Blog Content */
+.pact {
+    flex-direction: column; /* Stack boxes vertically on small screens */
+}
+
+.pact .box {
+    flex-direction: column; /* Stack content inside each box */
+    margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #03624C;
+    color: white;
+}
+
+/* Tablet Screens (768px and below) */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: space-between;
+        /* align-items: flex-start; */
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .burger-icon {
+        display: block; /* Show burger icon on mobile/tablet */
+        position: absolute;
+        right: 10px;
+        top: -70px;
+    }
+
+    .menu-container {
+        display: none; /* Hide menu links by default */
+        position: absolute;
+        top: -35px; /* Adjust based on your navbar height */
+        right: -25px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        flex-direction: column;
+        z-index: 1000;
+        flex-wrap: wrap;
+        width: 200px; /* Set a fixed width for the menu */
+    }
+
+    .menu-container a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-decoration: none;
+        color: #03624C;
+        font-size: 1rem;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .menu-container a:last-child {
+        border-bottom: none;
+    }
+
+    .menu-container a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .nav-3 {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-1, .nav-2, .nav-3 {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .pact {
+        flex-direction: row; /* Side-by-side layout for tablets */
+    }
+
+    .pact .box {
+        flex-direction: row; /* Horizontal layout inside each box */
+    }
+}
+
+/* Mobile Screens (480px and below) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    .footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .footer-box {
+        flex-direction: column;
+    }
+
+    .footer-box .contact-icons {
+        justify-content: left;
+        margin-bottom: 10px;
+    }
+
+    .pact .box {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .pact {
+        width: 100%;
+    }
+}
+
+/* Media Queries for Desktops */
+@media (min-width: 1024px) {
+    .nav-1 input {
+        width: auto; /* Restore original width */
+    }
+
+    .pact {
+        width: 80%; /* Center content with a fixed width */
+    }
+}
