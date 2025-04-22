@@ -17,12 +17,18 @@
 
 // Function to open a modal
 function openModal(modalId) {
-    document.getElementById(modalId).style.display = 'block';
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block'; // Show the modal
+    }
 }
 
 // Function to close a modal
 function closeModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none'; // Hide the modal
+    }
 }
 
 // Close the modal when clicking outside of it
@@ -59,20 +65,23 @@ backToTopButton.addEventListener('click', function () {
 
 // Function to toggle the menu
 function toggleMenu() {
-    const menu = document.getElementById('menu-container');
-    if (menu.style.display === 'block') {
-        menu.style.display = 'none'; // Hide the menu
-    } else {
-        menu.style.display = 'block'; // Show the menu
-    }
+    const menuContainer = document.getElementById('menu-container');
+    menuContainer.style.display = menuContainer.style.display === 'block' ? 'none' : 'block';
 }
 
 // Close the menu when clicking outside of it
-window.addEventListener('click', function (event) {
-    const menu = document.getElementById('menu-container');
+document.addEventListener('click', function (event) {
+    const menuContainer = document.getElementById('menu-container');
     const burgerIcon = document.querySelector('.burger-icon');
-    if (event.target !== menu && event.target !== burgerIcon) {
-        menu.style.display = 'none';
+
+    // Check if the click is outside the menu and burger icon
+    if (
+        menuContainer.style.display === 'block' && // Menu is open
+        event.target !== menuContainer && // Click is not on the menu container
+        event.target !== burgerIcon && // Click is not on the burger icon
+        !menuContainer.contains(event.target) // Click is not inside the menu container
+    ) {
+        menuContainer.style.display = 'none'; // Hide the menu
     }
 });
 

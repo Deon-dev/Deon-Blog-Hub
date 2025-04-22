@@ -202,6 +202,34 @@
                         prevEl: '.swiper-button-prev',
                     },
                 });
+
+                // Function to open a modal
+                function openModal(modalId) {
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.style.display = 'block'; // Show the modal
+                    }
+                }
+
+                // Function to close a modal
+                function closeModal(modalId) {
+                    const modal = document.getElementById(modalId);
+                    if (modal) {
+                        modal.style.display = 'none'; // Hide the modal
+                    }
+                }
+
+                // Close the modal when clicking outside of it
+                window.onclick = function (event) {
+                    const loginModal = document.getElementById('loginModal');
+                    const signupModal = document.getElementById('signupModal');
+                    if (event.target === loginModal) {
+                        loginModal.style.display = 'none';
+                    }
+                    if (event.target === signupModal) {
+                        signupModal.style.display = 'none';
+                    }
+                };
             </script>
             <script src="script.js"></script>
         </main>
@@ -217,7 +245,15 @@
                 <input type="email" id="loginEmail" placeholder="Enter your email" required>
                 <label for="loginPassword">Password:</label>
                 <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                <div class="form-options">
+                    <label>
+                      <!-- <input type="checkbox" class="checkbox"> -->
+                      Remember Me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div><br>
                 <button type="submit">Login</button>
+                <p>New User?<a href="#signupModal" class="signup"> Signup</a></p>
             </form>
         </div>
     </div>
@@ -234,7 +270,14 @@
                 <input type="email" id="signupEmail" placeholder="Enter your email" required>
                 <label for="signupPassword">Password:</label>
                 <input type="password" id="signupPassword" placeholder="Enter your password" required>
+                <div class="form-options">
+                    <label>
+                      <!-- <input type="checkbox" class="checkbox"> -->
+                      I accept the <a href="#">Terms of use</a> & <a href="#">Privacy policy</a>
+                    </label>
+                </div>
                 <button type="submit">Signup</button>
+                <p>Already have an account?<a href="#loginModal" class="signup"> Login</a></p>
             </form>
         </div>
     </div>

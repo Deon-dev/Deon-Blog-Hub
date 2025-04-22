@@ -161,6 +161,7 @@ hr {
     /* text-align: justify; */
     padding: 20px;
     line-height: normal;
+    position: relative;
 }
 
 .box-content h3 {
@@ -294,7 +295,7 @@ footer a {
 }
 
 .modal-content {
-    background-color: transparent; /*Transparent background I used white background initially */
+    background-color: #fff; /*Transparent background I used white background initially */
     margin: 10% auto;
     padding: 20px;
     border-radius: 5px;
@@ -328,6 +329,7 @@ footer a {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin: 10px 0;
 }
 
 .modal-content button:hover {
@@ -387,8 +389,67 @@ footer a {
     color: #3498db;
 }
   
-.forgot-password:hover, .signup:hover, a:hover {
+.forgot-password:hover, .signup:hover {
     text-decoration: underline;
+}
+
+/* Blog Meta Container */
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: auto;
+    border-top: 1px solid #ccc; /* Add a subtle separator */
+    background-color: brown;
+    position: relative;
+    bottom: 0;
+    /* top: 50px; */
+}
+
+/* Author Info */
+.author-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Fully rounded image */
+    object-fit: cover;
+    border: 2px solid #03624C; /* Optional border */
+}
+
+.author-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 0;
+    color: #03624C;
+}
+
+.post-date {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0;
+}
+
+/* Engagement Info */
+.engagement-info {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.engagement-info span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.engagement-info span:last-child {
+    margin-bottom: 0;
 }
 
 
