@@ -398,14 +398,9 @@ footer a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
     padding-top: 10px;
-    width: auto;
-    border-top: 1px solid #ccc; /* Add a subtle separator */
-    background-color: brown;
-    position: relative;
-    bottom: 0;
-    /* top: 50px; */
+    border-top: 1px solid #ccc;
 }
 
 /* Author Info */
@@ -418,9 +413,9 @@ footer a {
 .author-img {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Fully rounded image */
+    border-radius: 50%; 
     object-fit: cover;
-    border: 2px solid #03624C; /* Optional border */
+    border: 2px solid #03624C; 
 }
 
 .author-name {

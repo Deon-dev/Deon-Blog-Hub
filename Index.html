@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsiveness.css">
+    <link rel="shortcut icon" href="Images/android-chrome-192x192.png" type="image/x-icon">
     <style>
         :root {
             --heading: 'Poppins', sans-serif;
@@ -128,7 +129,7 @@
                 <div id="menu-container" class="menu-container">
                     <a href="Index.html">HOME</a>
                     <a href="Blog.html">BLOG</a>
-                    <a href="#about">ABOUT</a>
+                    <a href="About.html">ABOUT</a>
                     <a href="#footer">CONTACT</a>
                 </div>
             </div>
@@ -201,6 +202,8 @@
                         nextEl: '.swiper-button-next',
                         prevEl: '.swiper-button-prev',
                     },
+                    slidesPerView: 1,
+                    spaceBetween: 10,
                 });
 
                 // Function to open a modal

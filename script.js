@@ -1,20 +1,3 @@
-// Function to handle blog search
-// document.getElementById('search').addEventListener('input', function () {
-//     const query = this.value.toLowerCase(); // Get the search input value and convert to lowercase
-//     const blogPosts = document.querySelectorAll('.swiper-slide'); // Select all blog post containers
-
-//     blogPosts.forEach(post => {
-//         const title = post.querySelector('.recent-text h1').textContent.toLowerCase(); // Get the blog title
-//         const content = post.querySelector('.recent-text p').textContent.toLowerCase(); // Get the blog content
-
-//         if (title.includes(query) || content.includes(query)) {
-//             post.style.display = 'block'; // Show the blog post if it matches the query
-//         } else {
-//             post.style.display = 'none'; // Hide the blog post if it doesn't match
-//         }
-//     });
-// });
-
 // Function to open a modal
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
@@ -85,28 +68,28 @@ document.addEventListener('click', function (event) {
     }
 });
 
-const swiper = new Swiper('.mySwiper', {
-    loop: true,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-        480: {
-            slidesPerView: 1, // Show 1 slide on mobile
-            spaceBetween: 10,
-        },
-        768: {
-            slidesPerView: 2, // Show 2 slides on tablets
-            spaceBetween: 20,
-        },
-        1024: {
-            slidesPerView: 3, // Show 3 slides on desktops
-            spaceBetween: 30,
-        },
-    },
-});
+// const swiper = new Swiper('.mySwiper', {
+//     loop: true,
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//     },
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+//     breakpoints: {
+//         480: {
+//             slidesPerView: 1, // Show 1 slide on mobile
+//             spaceBetween: 10,
+//         },
+//         768: {
+//             slidesPerView: 2, // Show 2 slides on tablets
+//             spaceBetween: 20,
+//         },
+//         1024: {
+//             slidesPerView: 3, // Show 3 slides on desktops
+//             spaceBetween: 30,
+//         },
+//     },
+// });
