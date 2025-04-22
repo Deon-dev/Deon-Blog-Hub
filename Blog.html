@@ -162,12 +162,15 @@
                 </div><br>
             </div>
         </section>
-        <div class="newsletter">
-            <h1>Subscribe to My News Letter</h1>
-            <p>Subscribe and get my Latest article in your inbox</p>
-            <input type="email" name="email" id="email" placeholder="Your Email">
-            <input type="submit" value="Subscribe">
-        </div>
+
+        <form action="https://formspree.io/f/mgvkewnb" method="POST">
+            <div class="newsletter">
+                <h1>Subscribe to My News Letter</h1>
+                <p>Subscribe and get my Latest article in your inbox</p>
+                <input type="email" name="email" id="email" placeholder="Your Email">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
 
         <section class="body">
             <div class="pact">
@@ -291,7 +294,7 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('loginModal')">&times;</span>
                 <h2>Login</h2>
-                <form>
+                <form action="https://formspree.io/f/mgvkewnb" method="POST">
                     <label for="loginEmail">Email:</label>
                     <input type="email" id="loginEmail" placeholder="Enter your email" required>
                     <label for="loginPassword">Password:</label>
