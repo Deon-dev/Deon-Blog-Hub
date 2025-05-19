@@ -155,6 +155,7 @@ main {
 
 hr {
     border: none; /* Remove default border */
+    display: none;
 }
 
 .box-content {

@@ -150,6 +150,10 @@ img {
     .nav-3 {
         display: none;
     }
+
+    /* .contact-icons {
+        display: flex;
+    } */
 }
 
 /* Mobile Screens (480px and below) */
