@@ -1,8 +1,15 @@
 // Function to open a modal
 function openModal(modalId) {
+    // Close any currently open modals
+    const openModals = document.querySelectorAll('.modal');
+    openModals.forEach(modal => {
+        modal.style.display = 'none';
+    });
+
+    // Open the specified modal
     const modal = document.getElementById(modalId);
     if (modal) {
-        modal.style.display = 'block'; // Show the modal
+        modal.style.display = 'block';
     }
 }
 

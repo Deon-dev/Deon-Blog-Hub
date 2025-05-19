@@ -27,7 +27,7 @@
             <div class="nav-2">
                 <span class="burger-icon" onclick="toggleMenu()">&#9776;</span> <!-- Burger Icon -->
                 <div id="menu-container" class="menu-container">
-                    <a href="Index.html">HOME</a>
+                    <a href="index.html">HOME</a>
                     <a href="Blog.html">BLOG</a>
                     <a href="About.html">ABOUT</a>
                     <a href="#footer">CONTACT</a>
@@ -161,12 +161,15 @@
                 </div>
             </div>
         </section>
-        <div class="newsletter">
-            <h1>Subscribe to My News Letter</h1>
-            <p>Subscribe and get my Latest article in your inbox</p>
-            <input type="email" name="email" id="email" placeholder="Your Email">
-            <input type="submit" value="Subscribe">
-        </div>
+
+        <form action="https://formspree.io/f/mgvkewnb" method="POST">
+            <div class="newsletter">
+                <h1>Subscribe to My News Letter</h1>
+                <p>Subscribe and get my Latest article in your inbox</p>
+                <input type="email" name="email" id="email" placeholder="Your Email">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
 
         <section class="body">
             <div class="pact">
@@ -289,7 +292,7 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('loginModal')">&times;</span>
                 <h2>Login</h2>
-                <form>
+                <form action="https://formspree.io/f/mgvkewnb" method="POST">
                     <label for="loginEmail">Email:</label>
                     <input type="email" id="loginEmail" placeholder="Enter your email" required>
                     <label for="loginPassword">Password:</label>
@@ -344,7 +347,7 @@
                 <!-- Quick Links Section -->
                 <div class="footer-links">
                     <h3>Quick Links</h3>
-                    <a href="Index.html">Home</a>
+                    <a href="index.html">Home</a>
                     <a href="Blog.html">Blogs</a>
                     <a href="About.html">About Us</a>
                     <a href="#footer">Contact</a>
