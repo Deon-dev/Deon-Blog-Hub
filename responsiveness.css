@@ -83,7 +83,7 @@ img {
 }
 
 /* Tablet Screens (768px and below) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 834px) {
     body {
         font-size: 15px;
     }
@@ -98,8 +98,29 @@ img {
     }
 
     .swiper {
-        width: 100%; /* Slightly smaller width for tablets */
-        height: 100%;
+        width: 100%;
+        height: auto !important; /* Allow dynamic height */
+        min-height: 320px; /* Ensure enough space for content */
+    }
+    .swiper-slide {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto !important;
+        min-height: 320px;
+        padding: 15px 5px;
+        box-sizing: border-box;
+    }
+    .recent-text {
+        padding: 10px 0 0 0;
+    }
+    .recent-text button {
+        width: 100%;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .swiper-slide img {
+        display: none; /* Hide images on mobile if you want only text */
     }
 
 
@@ -151,15 +172,21 @@ img {
         display: none;
     }
 
-    /* .contact-icons {
-        display: flex;
-    } */
+    .pact .box {
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
 }
 
 /* Mobile Screens (480px and below) */
 @media screen and (max-width: 480px) {
     body {
         font-size: 14px;
+    }
+
+    main {
+        height: auto; /* Adjust main height for mobile */
+        margin-top: 20px;
     }
 
     .navbar {
@@ -195,18 +222,38 @@ img {
     .pact {
         width: 100%;
     }
-}
 
-/* Media Queries for Desktops */
-@media (min-width: 1024px) {
-    .nav-1 input {
-        width: auto; /* Restore original width */
+    .swiper {
+        width: 100%;
+        height: auto !important; /* Allow dynamic height */
+        min-height: 320px; /* Ensure enough space for content */
     }
 
-    .pact {
-        width: 80%; /* Center content with a fixed width */
+    .swiper-slide {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto !important;
+        min-height: 320px;
+        padding: 15px 5px;
+        box-sizing: border-box;
+    }
+
+    .recent-text {
+        padding: 10px 0 0 0;
+    }
+
+    .recent-text button {
+        width: 100%;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .swiper-slide img {
+        display: none; /* Hide images on mobile if you want only text */
     }
 }
+
 
 /* Apple Watch Screens (162px and below) */
 @media screen and (max-width: 162px) {

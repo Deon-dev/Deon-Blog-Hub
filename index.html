@@ -188,53 +188,56 @@
                 <a href="https://web.facebook.com/Gid.clakoy"><i class="fa-brands fa-facebook"></i></a>
                 <a href=""><i class="fa-brands fa-linkedin"></i></a>
             </div>
-            
-            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-            <script>
-                const swiper = new Swiper('.mySwiper', {
-                    loop: true,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                });
-
-                // Function to open a modal
-                function openModal(modalId) {
-                    const modal = document.getElementById(modalId);
-                    if (modal) {
-                        modal.style.display = 'block'; // Show the modal
-                    }
-                }
-
-                // Function to close a modal
-                function closeModal(modalId) {
-                    const modal = document.getElementById(modalId);
-                    if (modal) {
-                        modal.style.display = 'none'; // Hide the modal
-                    }
-                }
-
-                // Close the modal when clicking outside of it
-                window.onclick = function (event) {
-                    const loginModal = document.getElementById('loginModal');
-                    const signupModal = document.getElementById('signupModal');
-                    if (event.target === loginModal) {
-                        loginModal.style.display = 'none';
-                    }
-                    if (event.target === signupModal) {
-                        signupModal.style.display = 'none';
-                    }
-                };
-            </script>
-            <script src="script.js"></script>
         </main>
+
+            
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.mySwiper', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                slidesPerView: 1,
+                spaceBetween: 10,
+                autoHeight: true, // Add this line
+            });
+
+            // Function to open a modal
+            function openModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'block'; // Show the modal
+                }
+            }
+
+            // Function to close a modal
+            function closeModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.style.display = 'none'; // Hide the modal
+                }
+            }
+
+            // Close the modal when clicking outside of it
+            window.onclick = function (event) {
+                const loginModal = document.getElementById('loginModal');
+                const signupModal = document.getElementById('signupModal');
+                if (event.target === loginModal) {
+                    loginModal.style.display = 'none';
+                }
+                if (event.target === signupModal) {
+                    signupModal.style.display = 'none';
+                }
+            };
+        </script>
+        <script src="script.js"></script>
+        
     </section>
 
     <!-- Login Modal -->
