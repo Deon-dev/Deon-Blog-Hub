@@ -149,12 +149,20 @@
             <div class="modal-content">
                 <span class="close" onclick="closeModal('loginModal')">&times;</span>
                 <h2>Login</h2>
-                <form>
+                <form action="" method="POST">
                     <label for="loginEmail">Email:</label>
                     <input type="email" id="loginEmail" placeholder="Enter your email" required>
                     <label for="loginPassword">Password:</label>
                     <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                    <div class="form-options">
+                        <label>
+                        <!-- <input type="checkbox" class="checkbox"> -->
+                        Remember Me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div><br>
                     <button type="submit">Login</button>
+                    <p>New User? <a href="#" onclick="openModal('signupModal')" class="signup">Signup</a></p>
                 </form>
             </div>
         </div>
@@ -171,7 +179,14 @@
                     <input type="email" id="signupEmail" placeholder="Enter your email" required>
                     <label for="signupPassword">Password:</label>
                     <input type="password" id="signupPassword" placeholder="Enter your password" required>
+                    <div class="form-options">
+                        <label>
+                        <!-- <input type="checkbox" class="checkbox"> -->
+                        I accept the <a href="#">Terms of use</a> & <a href="#">Privacy policy</a>
+                        </label>
+                    </div>
                     <button type="submit">Signup</button>
+                    <p>Already have an account? <a href="#" onclick="openModal('loginModal')" class="signup">Login</a></p>
                 </form>
             </div>
         </div>
